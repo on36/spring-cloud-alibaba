@@ -5,7 +5,7 @@
 Spring Boot 2.4.0 版本开始默认不启动 bootstrap 容器
 本项目演示如何在 Spring boot >= 2.4.0 版本不启用 bootstrap 容器情况下如何使用 nacos
 
-[Nacos](https://github.com/alibaba/Nacos) 是阿里巴巴开源的一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
+***<font color=red>适用于 Spring boot >= 2.4.0 并且使用 import 方式导入配置，将不会再默认拉取配置，需要手动配置 dataId。</font>***
 
 ## 示例
 

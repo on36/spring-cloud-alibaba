@@ -39,8 +39,6 @@ Spring Cloud Alibaba 致力于提供微服务开发的一站式解决方案。�
 
 **[RocketMQ](https://rocketmq.apache.org/)**：一款开源的分布式消息系统，基于高可用分布式集群技术，提供低延时的、高可靠的消息发布与订阅服务。
 
-**[Dubbo](https://github.com/apache/dubbo)**：Apache Dubbo™ 是一款高性能 Java RPC 框架。
-
 **[Seata](https://github.com/seata/seata)**：阿里巴巴开源产品，一个易于使用的高性能微服务分布式事务解决方案。
 
 **[Alibaba Cloud OSS](https://www.aliyun.com/product/oss)**: 阿里云对象存储服务（Object Storage Service，简称 OSS），是阿里云提供的海量、安全、低成本、高可靠的云存储服务。您可以在任何应用、任何时间、任何地点存储和访问任意类型的数据。
@@ -52,7 +50,7 @@ Spring Cloud Alibaba 致力于提供微服务开发的一站式解决方案。�
 更多组件请参考 [Roadmap](https://github.com/alibaba/spring-cloud-alibaba/blob/2022.0/Roadmap-zh.md)。
 
 ## 如何构建
-* 2021.x 分支对应的是 Spring Cloud 2022 与 Spring Boot 2.6.x，最低支持 JDK 1.8。
+* 2021.x 分支对应的是 Spring Cloud 2021 与 Spring Boot 2.6.x，最低支持 JDK 1.8。
 * 2020.0 分支对应的是 Spring Cloud 2020 与 Spring Boot 2.4.x，最低支持 JDK 1.8。
 * 2.2.x 分支对应的是 Spring Cloud Hoxton 与 Spring Boot 2.2.x，最低支持 JDK 1.8。
 * greenwich 分支对应的是 Spring Cloud Greenwich 与 Spring Boot 2.1.x，最低支持 JDK 1.8。
@@ -76,14 +74,14 @@ Spring Cloud 使用 Maven 来构建，最快的使用方式是将本项目 clone
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-            <version>2.2.7.RELEASE</version>
+            <version>2021.0.4.0</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
     </dependencies>
 </dependencyManagement>
 ```
-然后在 `dependencies` 中添加自己所需使用的依赖即可使用。
+然后在 `dependencies` 中添加自己所需使用的依赖即可使用。如果你想选择老版本，可以参考[版本说明](https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E)。
 
 ## 演示 Demo
 
@@ -133,7 +131,8 @@ spring-cloud-alibaba@googlegroups.com，欢迎通过此邮件列表讨论与 spr
 * Spring Cloud Alibaba 开源交流群（3群，已满）：35153903
 * Spring Cloud Alibaba 开源交流群（4群，已满）：30301472
 * Spring Cloud Alibaba 开源交流群（5群，已满）：34930571
-* Spring Cloud Alibaba 开源交流群（6群）：34351718
+* Spring Cloud Alibaba 开源交流群（6群，已满）：34351718
+* Spring Cloud Alibaba 开源交流群（7群）：2415000986
 
 ## 社区相关开源
 

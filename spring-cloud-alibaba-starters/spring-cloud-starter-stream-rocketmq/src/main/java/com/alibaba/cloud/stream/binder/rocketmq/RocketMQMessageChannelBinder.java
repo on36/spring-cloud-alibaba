@@ -16,9 +16,6 @@
 
 package com.alibaba.cloud.stream.binder.rocketmq;
 
-import java.util.UUID;
-
-import com.alibaba.cloud.stream.binder.rocketmq.constant.RocketMQConst;
 import com.alibaba.cloud.stream.binder.rocketmq.custom.RocketMQBeanContainerCache;
 import com.alibaba.cloud.stream.binder.rocketmq.extend.ErrorAcknowledgeHandler;
 import com.alibaba.cloud.stream.binder.rocketmq.integration.inbound.RocketMQInboundChannelAdapter;
@@ -127,7 +124,7 @@ public class RocketMQMessageChannelBinder extends
 			throw new RuntimeException(
 					"group must be configured for DLQ" + destination.getName());
 		}
-		group = anonymous ? nextDefaultConsumerGroup() : group;
+		group = anonymous ? RocketMQUtils.anonymousGroup(destination.getName()) : group;
 
 		RocketMQUtils.mergeRocketMQProperties(binderConfigurationProperties,
 				extendedConsumerProperties.getExtension());
@@ -182,14 +179,6 @@ public class RocketMQMessageChannelBinder extends
 				}
 			}
 		};
-	}
-
-	/**
-	 * generate next default consumer group.
-	 * @return next default consumer group name.
-	 */
-	private static String nextDefaultConsumerGroup() {
-		return RocketMQConst.DEFAULT_GROUP + UUID.randomUUID().toString();
 	}
 
 	/**
